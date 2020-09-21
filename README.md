@@ -1,24 +1,26 @@
-# README
+---
+<h4 align="center">
+  🚀 Coala Gerenciamento de Projetos
+ 
+</h4>
+<br>
+ 
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- [Ruby on Rails](https://rubyonrails.org/)
+- [Html](https://www.w3schools.com/html/)
+- [CSS](https://www.w3schools.com/html/)
 
-Things you may want to cover:
+## 💻 Projeto
 
-* Ruby version
+O objetivo do projeto é desenvolver um sistema para controle de Projetos e Atividades.
 
-* System dependencies
+##  💻 Acesso no Heroku
 
-* Configuration
+ - https://coala-guilhermef.herokuapp.com/
 
-* Database creation
+##  💻 Exemplo da tela
 
-* Database initialization
 
-* How to run the test suite
+----
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
