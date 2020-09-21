@@ -1,11 +1,19 @@
-<h1>Projetos</h1>
+<button type="button" class="btnnovo">
+    <%= link_to "Novo Projeto", new_project_path %>
+</button>
 
-<ul>
+<section class="container flex flex-wrap">
     <% @projects.each do |project|%>
-    <li><%= link_to project.name, project_path(project) %></li>
-    <li><%= project.dtini %></li>
-    <li><%= project.dtfim %></li>
+            <div class="item">
+                <ul>
+                    <li><%= link_to project.name, project_path(project) %></li>
+                    <li>Data Inicial: <%= project.dtini %></li>
+                    <li>Data Final: <%= project.dtfim %></li>
+                    <li>Finalizado?: Sim </li>
+                    <li>% Conclusão?: 100% </li>
+                </ul>
+            </div>
     <% end %>
-</ul>
+</section>
 <br>
-<%= link_to "Novo Projeto", new_project_path %>
+
