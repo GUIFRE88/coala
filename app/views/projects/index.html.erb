@@ -1,1 +1,11 @@
-<h1>Teste</h1>
+<h1>Projetos</h1>
+
+<ul>
+    <% @projects.each do |project|%>
+    <li><%= link_to project.name, project_path(project) %></li>
+    <li><%= project.dtini %></li>
+    <li><%= project.dtfim %></li>
+    <% end %>
+</ul>
+<br>
+<%= link_to "Novo Projeto", new_project_path %>

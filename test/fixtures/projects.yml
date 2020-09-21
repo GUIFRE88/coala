@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  dtini: 2020-09-20
+  dtfim: 2020-09-20
+
+two:
+  name: MyString
+  dtini: 2020-09-20
+  dtfim: 2020-09-20

@@ -1,0 +1,8 @@
+<h1>
+    <%= @project.name %>
+
+</h1>
+
+<%= link_to "Projetos", projects_path %>
+<%= link_to "Editar Projeto", edit_project_path(@project) %>
+<%= link_to "Excluir Projeto", project_path(@project), method: :delete, data: { confirm: "Deseja remover o Projeto ?"} %>

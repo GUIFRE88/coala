@@ -1,0 +1,19 @@
+<%= form_for(@project) do |p| %>
+<p>
+    <%= p.label :Nome %>
+    <%= p.text_field :name%>
+</p>
+<p>
+    <%= p.label :Data_Inicial %>
+    <%= p.date_select :dtini %>
+</p>
+<p>
+    <%= p.label :Data_Fim %>
+    <%= p.date_select :dtfim %>
+</p>
+<p>
+    <%= p.submit %>
+    <%= link_to 'Cancelar', root_path%>
+</p>
+
+<% end %>
