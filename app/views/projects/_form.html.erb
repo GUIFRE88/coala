@@ -1,0 +1,20 @@
+<%= form_for(@project) do |f| %>
+ <%= render 'layouts/errors' %>
+
+<p class="form-group">
+    <%= f.label :Nome %> </br>
+    <%= f.text_field :name, class:"form-control" %>
+</p>
+<p class="form-group">
+    <%= f.label :Data_Inicial %> </br>
+    <%= f.date_select :dtini, class:"form-control" %>
+</p>
+<p class="form-group">
+    <%= f.label :Data_Final %> </br>
+    <%= f.date_select :dtfim, class:"form-control" %>
+</p>
+<p>
+    <%= f.submit class:"btn btn-primary" %>
+    <%= link_to 'Cancelar', root_path, class:"btn btn-default" %>
+</p>
+<% end %>

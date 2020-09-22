@@ -1,8 +1,28 @@
-<h1>
-    <%= @project.name %>
-
-</h1>
-
-<%= link_to "Projetos", projects_path %>
-<%= link_to "Editar Projeto", edit_project_path(@project) %>
-<%= link_to "Excluir Projeto", project_path(@project), method: :delete, data: { confirm: "Deseja remover o Projeto ?"} %>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h2>Visualizando Projeto</h2>
+        </div>
+        <div class="panel-body">
+            <%= form_for(@project) do |f| %>
+                <p class="form-group">
+                    <%= f.label :Nome %> </br>
+                    <%= f.text_field :name, class:"form-control" %>
+                </p>
+                <p class="form-group">
+                    <%= f.label :Data_Inicial %> </br>
+                    <%= f.date_select :dtini, class:"form-control" %>
+                </p>
+                <p class="form-group">
+                    <%= f.label :Data_Final %> </br>
+                    <%= f.date_select :dtfim, class:"form-control" %>
+                </p>
+                <p>
+                    <%= link_to "Editar Projeto", edit_project_path(@project), class:"btn btn-primary" %>
+                    <%= link_to "Excluir Projeto", project_path(@project), method: :delete, data: { confirm: "Deseja remover o Projeto ?"}, class:"btn btn-danger" %>
+                    <%= link_to 'Cancelar', root_path, class:"btn btn-default" %>
+                </p>
+            <% end %>
+        </div>
+    </div>
+</div>
