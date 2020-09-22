@@ -22,9 +22,11 @@ class ProjectsController < ApplicationController
     def update
 
         @project = Project.find(params[:id])
-        @project.update(project_params)
-        redirect_to @project
-
+        if @project.update(project_params)
+            redirect_to @project, notice: "Projeto modificado com sucesso!"
+        else
+            render :edit
+        end
     end
 
     def new
@@ -37,7 +39,7 @@ class ProjectsController < ApplicationController
 
         @project = Project.new(project_params)
         if @project.save
-            redirect_to @project
+            redirect_to @project, notice: "Projeto criado com sucesso!"
         else
             render :new
         end        
@@ -48,7 +50,7 @@ class ProjectsController < ApplicationController
 
         @project = Project.find(params[:id])
         @project.destroy
-        redirect_to projects_url
+        redirect_to projects_url, alert: "Receita excluída."
 
     end
 
