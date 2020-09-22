@@ -8,6 +8,12 @@ pt-BR:
         name: Nome do Projeto
         dtini: Data Inicial
         dtfim: Data Final
+      task: 
+        name: Nome da Tarefa
+        dttini: Data Inicial
+        dttfim: Data Final
+        finish: Finalizado
+        task: Tarefa
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'

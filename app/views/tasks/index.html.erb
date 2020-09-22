@@ -1,29 +1,32 @@
 <div class="container">
     <% if @project.tasks.size > 0 %>
-        <div class="jumbotron">
-            <ul>
-                <% @tasks.each do |task| %>
-                <li>
-                    <p>
-                        <%= task.name %>
-                    </p>
-                    <p>
-                        <%= task.dttini %>
-                    </p>
-                    <p>
-                        <%= task.dttfim %>
-                    </p>
-                    <p>
-                        <%= task.finish %>
-                    </p>
-                </li>
-                <% end %>
-            </ul>
+        <% @tasks.each do |task| %>
+        <div class="container">
+            <div class="jumbotron">
+                <ul>
+                    <li>
+                    <p class="form-group">
+                            Nome: <%= task.name %>
+                        </p>
+                        <p class="form-group">
+                            Data Inicial: <%= task.dttini %>
+                        </p>
+                        <p class="form-group">
+                            Data Final: <%= task.dttfim %>
+                        </p>
+                        <p class="form-group">
+                            Finalizada? <%= task.finish %>
+                        </p>
+                    </li>
+                </ul>
+            </div>
         </div>
+         <% end %>
     <% else %>
         <div class="jumbotron">
             <h3>Não existe Tarefas</h3>
         </div>
     <% end %>
-     <%= link_to 'Projetos', projects_path, class:"btn btn-default" %>
+    <%= link_to "Nova Tarefa", new_project_task_path(@project), class:"btn btn-success" %>
+    <%= link_to 'Voltar', project_path(@project), class:"btn btn-default" %>
 </div>
