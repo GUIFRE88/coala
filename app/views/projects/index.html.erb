@@ -1,18 +1,19 @@
 <%= link_to 'Novo Projeto', new_project_path, class:"btn btn-primary" %>
+
 <br>
+
 <section class="container flex flex-wrap">
     <% @projects.each do |project|%>
-            <div class="item">
-                <ul>
-                    <li><%= link_to project.name, project_path(project) %></li>
-                    <li>Data Inicial: <%= project.dtini %></li>
-                    <li>Data Final: <%= project.dtfim %></li>
-                    <li>Finalizado?: Sim </li>
-                    <li>% Conclusão?: 100% </li>
-                </ul>
-            </div>
+    <div class="card border-secondary mb-3" style="max-width: 18rem;">
+    <div class="card-header"><%= link_to project.name, project_path(project) %></div>
+    <div class="card-body text-secondary">
+        <p class="card-text">Data Inicial: <%= project.dtini %></p>
+        <p class="card-text">Data Final: <%= project.dtfim %></p>
+        <p class="card-text">% Completo ?: <%= porcentagem(project) %> % </p>
+        <p class="card-text">Atrasado ?: <%= atrasado(project) %></p>
+    </div>
+    </div>
     <% end %>
 </section>
 <br>
-
 

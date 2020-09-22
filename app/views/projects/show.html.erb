@@ -7,15 +7,15 @@
             <%= form_for(@project) do |f| %>
                 <p class="form-group">
                     <%= f.label :Nome %> </br>
-                    <%= f.text_field :name, class:"form-control" %>
+                    <%= f.text_field :name, class:"form-control", disabled: true %>
                 </p>
                 <p class="form-group">
                     <%= f.label :Data_Inicial %> </br>
-                    <%= f.date_select :dtini, class:"form-control" %>
+                    <%= f.date_select :dtini, class:"form-control", disabled: true %>
                 </p>
                 <p class="form-group">
                     <%= f.label :Data_Final %> </br>
-                    <%= f.date_select :dtfim, class:"form-control" %>
+                    <%= f.date_select :dtfim, class:"form-control", disabled: true %>
                 </p>
                 <p>
                     <%= link_to "Editar Projeto", edit_project_path(@project), class:"btn btn-primary" %>
