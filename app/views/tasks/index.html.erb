@@ -1,0 +1,29 @@
+<div class="container">
+    <% if @project.tasks.size > 0 %>
+        <div class="jumbotron">
+            <ul>
+                <% @tasks.each do |task| %>
+                <li>
+                    <p>
+                        <%= task.name %>
+                    </p>
+                    <p>
+                        <%= task.dttini %>
+                    </p>
+                    <p>
+                        <%= task.dttfim %>
+                    </p>
+                    <p>
+                        <%= task.finish %>
+                    </p>
+                </li>
+                <% end %>
+            </ul>
+        </div>
+    <% else %>
+        <div class="jumbotron">
+            <h3>Não existe Tarefas</h3>
+        </div>
+    <% end %>
+     <%= link_to 'Projetos', projects_path, class:"btn btn-default" %>
+</div>
