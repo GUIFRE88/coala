@@ -19,7 +19,26 @@ O objetivo do projeto é desenvolver um sistema para controle de Projetos e Ativ
 
  - https://coala-guilhermef.herokuapp.com/
 
-##  💻 Exemplo da tela
+##  💻 Para utilizar o projeto
+
+ - Baixar o projeto.
+ - Na pasta do projeto rodar o 'Bundle Install'
+ - Depois o comando 'rake db:migrate'
+ - Após a criação das migrações usar o 'rails s' para criar o servidor.
+ - Entrar no endereço 'localhost:3000' 
+
+##  💻 Exemplo da tela inicial
+![alt text](https://github.com/GUIFRE88/coala/blob/master/app/assets/images/tela-inicial.PNG)
+
+##  💻 Exemplo da tela de inclusão de um projeto
+![alt text](https://github.com/GUIFRE88/coala/blob/master/app/assets/images/novo-projeto.PNG)
+
+##  💻 Exemplo da tela de visualização de um projeto
+![alt text](https://github.com/GUIFRE88/coala/blob/master/app/assets/images/visualizando-projeto.PNG)
+
+##  💻 Exemplo da tela de tarefas
+![alt text](https://github.com/GUIFRE88/coala/blob/master/app/assets/images/tarefas.PNG)
+
 
 
 ----
