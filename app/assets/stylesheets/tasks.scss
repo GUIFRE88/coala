@@ -1,3 +1,40 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.painel-task{
+	border: 2px solid #DCDCDC;
+	border-radius: 8px;
+	padding: 15px;
+	margin: 15px;
+	width: 250px;
+}
+
+.painel-nome-task {
+	background-color: #449D44;
+	padding: 6px;
+    width: 100%;
+    color: white;
+    font-size:14px;
+    font-weight: bold;
+	border-radius: 0px 12px 12px 0px;
+}
+
+.camp-task {
+	font-size: 13px;
+	color: black;
+	font-weight: bold;
+	margin-top: 2px;
+	border-left: 2px solid #DCDCDC;
+	border-bottom: 2px solid #DCDCDC;
+	padding: 3px 0px 0px 3px;
+}
+
+.btn-task-new{
+    background-color: #449D44;
+	color: white;
+	font-size:13px;
+	font-weight: bold;
+	padding: 10px;
+	margin-left: 1px;
+	border-radius: 0px 12px 12px 0px;
+}

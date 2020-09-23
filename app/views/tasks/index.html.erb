@@ -1,32 +1,22 @@
-<div class="container">
+<%= link_to "Nova Tarefa", new_project_task_path(@project), class:"btn-task-new" %>
+<br>
+<section class="container flex flex-wrap">
     <% if @project.tasks.size > 0 %>
         <% @tasks.each do |task| %>
-        <div class="container">
-            <div class="jumbotron">
-                <ul>
-                    <li>
-                        <p class="form-group">
-                            Nome: <%= task.name %>
-                        </p>
-                        <p class="form-group">
-                            Data Inicial: <%= task.dttini %>
-                        </p>
-                        <p class="form-group">
-                            Data Final: <%= task.dttfim %>
-                        </p>
-                        <p class="form-group">
-                            Finalizada? <%= task.finish %>
-                        </p>
-                    </li>
-                </ul>
+        <div class="painel-task">
+            <div class="painel-nome-task">
+                <%= task.name %>
             </div>
+            <p class="camp-task">Data Inicial: <%= task.dttini.strftime("%d/%m/%Y") %></p>
+            <p class="camp-task">Data Final: <%= task.dttfim.strftime("%d/%m/%Y")  %></p>
+            <p class="camp-task">Finalizado: <%= task.finish %></p>
         </div>
-         <% end %>
+        <% end %>
     <% else %>
         <div class="jumbotron">
             <h3>Não existe Tarefas</h3>
         </div>
     <% end %>
-    <%= link_to "Nova Tarefa", new_project_task_path(@project), class:"btn btn-success" %>
-    <%= link_to 'Voltar', project_path(@project), class:"btn btn-default" %>
-</div>
+</section>
+<br>
+<%= link_to 'Voltar', project_path(@project), class:"btn btn-default" %>

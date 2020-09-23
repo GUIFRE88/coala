@@ -1,19 +1,19 @@
-<%= link_to 'Novo Projeto', new_project_path, class:"btn btn-primary" %>
-
+<%= link_to 'Novo Projeto', new_project_path, class:"btn-new" %>
 <br>
-
 <section class="container flex flex-wrap">
     <% @projects.each do |project|%>
-    <div class="card border-secondary mb-3" style="max-width: 18rem;">
-    <div class="card-header"><%= link_to project.name, project_path(project) %></div>
-    <div class="card-body text-secondary">
-        <p class="card-text">Data Inicial: <%= project.dtini %></p>
-        <p class="card-text">Data Final: <%= project.dtfim %></p>
-        <p class="card-text">% Completo ?: <%= porcentagem(project) %> % </p>
-        <p class="card-text">Atrasado ?: <%= atrasado(project) %></p>
-    </div>
+    <div class="painel-tot">
+        <div class="painel-nome-coala">
+            <%= link_to project.name, project_path(project), class:"btn-project" %>
+        </div>
+        <p class="camp-project">Data Inicial: <%= project.dtini.strftime("%d/%m/%Y") %></p>
+        <p class="camp-project">Data Final: <%= project.dtfim.strftime("%d/%m/%Y")  %></p>
+        <p class="camp-project">% Completo: <%= porcentagem(project) %> % </p>
+        <p class="camp-project">Atrasado: <%= atrasado(project) %></p>
     </div>
     <% end %>
 </section>
 <br>
+
+
 
