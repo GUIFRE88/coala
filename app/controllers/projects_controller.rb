@@ -50,7 +50,7 @@ class ProjectsController < ApplicationController
 
         @project = Project.find(params[:id])
         @project.destroy
-        redirect_to projects_url, alert: "Receita excluída."
+        redirect_to projects_url, alert: "Projeto excluída."
 
     end
 
