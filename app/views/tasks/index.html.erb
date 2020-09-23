@@ -9,7 +9,11 @@
             </div>
             <p class="camp-task">Data Inicial: <%= task.dttini.strftime("%d/%m/%Y") %></p>
             <p class="camp-task">Data Final: <%= task.dttfim.strftime("%d/%m/%Y")  %></p>
-            <p class="camp-task">Finalizado: <%= task.finish %></p>
+            <p class="camp-task">Finalizado: <%= finalizado(task) %></p>
+            <p>
+                <%= link_to "Editar Tarefa", edit_project_task_path(@project.id, task), class:"btn btn-primary" %>
+                <%= link_to "Excluir Tarefa", project_task_path(@project.id, task), method: :delete, data: { confirm: "Deseja remover a Tarefa ?"}, class:"btn btn-danger" %>
+            </p>
         </div>
         <% end %>
     <% else %>

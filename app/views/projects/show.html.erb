@@ -20,10 +20,10 @@
                 <p>
                     <%= link_to "Editar Projeto", edit_project_path(@project), class:"btn btn-primary" %>
                     <%= link_to "Excluir Projeto", project_path(@project), method: :delete, data: { confirm: "Deseja remover o Projeto ?"}, class:"btn btn-danger" %>
-                    <%= link_to 'Voltar', root_path, class:"btn btn-default" %>
                     <%= link_to "Tarefas", project_tasks_path(@project), class:"btn btn-success" %>
                 </p>
             <% end %>
         </div>
     </div>
 </div>
+<%= link_to 'Voltar', root_path, class:"btn btn-default" %>

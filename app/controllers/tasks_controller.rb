@@ -34,6 +34,30 @@ class TasksController < ApplicationController
 
     end
 
+    def edit
+
+        @task = Task.find(params[:id])
+
+    end
+
+    def update
+
+        @task = Task.find(params[:id])
+        if @task.update(task_params)
+            redirect_to project_tasks_url, notice: "Tarefa modificada com sucesso!"
+        else
+            render :edit
+        end
+    end
+
+    def destroy
+
+        @task = Task.find(params[:id])
+        @task.destroy
+        redirect_to project_tasks_url, alert: "Tarefa excluída."
+
+    end
+
     private 
 
     # Campos que podem ser gravados

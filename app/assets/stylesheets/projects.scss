@@ -68,15 +68,19 @@ body {
 
 .painel-nome-coala {
 	background-color: #6C53A2;
-	padding: 6px;
 	width: 100%;
 	border-radius: 0px 12px 12px 0px;
+	padding: 10px 1px 1px 1px;
+}
+.painel-nome-coala :hover{
+	cursor: pointer;
 }
 
-.btn-project{
+.nome-project{
 	color: white;
 	font-size:15px;
 	font-weight: bold;
+	margin-left: 4px;
 }
 
 .camp-project {

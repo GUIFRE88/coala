@@ -3,8 +3,9 @@
 <section class="container flex flex-wrap">
     <% @projects.each do |project|%>
     <div class="painel-tot">
+    <%= link_to project_path(project) do %>
         <div class="painel-nome-coala">
-            <%= link_to project.name, project_path(project), class:"btn-project" %>
+            <p class="nome-project"> <%= project.name %></p>
         </div>
         <p class="camp-project">Data Inicial: <%= project.dtini.strftime("%d/%m/%Y") %></p>
         <p class="camp-project">Data Final: <%= project.dtfim.strftime("%d/%m/%Y")  %></p>
@@ -12,8 +13,8 @@
         <p class="camp-project">Atrasado: <%= atrasado(project) %></p>
     </div>
     <% end %>
+    <% end %>
 </section>
 <br>
-
 
 
